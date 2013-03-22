@@ -537,6 +537,18 @@ void MapDocument::emitRegionEdited(const QRegion &region, Layer *layer)
     emit regionEdited(region, layer);
 }
 
+/**
+ * Emits the tileset changed signal. This signal is currently used when adding
+ * or removing tiles from a tileset.
+ *
+ * @todo Emit more specific signals.
+ */
+void MapDocument::emitTilesetChanged(Tileset *tileset)
+{
+    Q_ASSERT(mMap->tilesets().contains(tileset));
+    emit tilesetChanged(tileset);
+}
+
 void MapDocument::emitTileTerrainChanged(const QList<Tile *> &tiles)
 {
     if (!tiles.isEmpty())

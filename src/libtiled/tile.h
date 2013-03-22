@@ -150,6 +150,8 @@ private:
     QString mImageSource;
     unsigned mTerrain;
     float mTerrainProbability;
+
+    friend class Tileset; // To allow changing the tile id
 };
 
 } // namespace Tiled

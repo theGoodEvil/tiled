@@ -232,6 +232,8 @@ public:
      */
     void emitRegionEdited(const QRegion &region, Layer *layer);
 
+    void emitTilesetChanged(Tileset *tileset);
+
     /**
      * Emits the signal notifying tileset models about changes to tile terrain
      * information. All the \a tiles need to be from the same tileset.
@@ -308,6 +310,7 @@ signals:
     void tilesetMoved(int from, int to);
     void tilesetFileNameChanged(Tileset *tileset);
     void tilesetNameChanged(Tileset *tileset);
+    void tilesetChanged(Tileset *tileset);
 
     void objectsAdded(const QList<MapObject*> &objects);
     void objectsAboutToBeRemoved(const QList<MapObject*> &objects);
