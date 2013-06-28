@@ -254,11 +254,6 @@ void MapObjectItem::setEditable(bool editable)
     const bool handlesVisible = mIsEditable && mObject->cell().isEmpty();
     mResizeHandle->setVisible(handlesVisible && mObject->polygon().isEmpty());
 
-    if (mIsEditable)
-        setCursor(Qt::SizeAllCursor);
-    else
-        unsetCursor();
-
     update();
 }
 

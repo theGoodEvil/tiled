@@ -62,7 +62,6 @@ public:
         setFlags(QGraphicsItem::ItemIgnoresTransformations |
                  QGraphicsItem::ItemIgnoresParentOpacity);
         setZValue(10000);
-        setCursor(Qt::SizeAllCursor);
     }
 
     MapObjectItem *mapObjectItem() const { return mMapObjectItem; }
